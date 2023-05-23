@@ -1,7 +1,7 @@
 from flask import Flask, render_template as rt
+from pathlib import Path
 
-app = Flask(__name__)
-app.config['template_folder'] = 'templates'
+app = Flask(__name__, template_folder=Path(__file__).parent.parent / 'templates')
 
 @app.route('/')
 def home():
