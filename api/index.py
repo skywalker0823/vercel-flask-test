@@ -1,11 +1,10 @@
 from flask import Flask, render_template as rt
-from pathlib import Path
 
-app = Flask(__name__, template_folder=Path(__file__).parent.parent / 'templates')
+app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return rt('index.html')
+    return 'Hello, WorldXD!'
 
 @app.route('/about')
 def about():
